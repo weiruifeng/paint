@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘图</title>
+    <style>
+        #divcanvas{
+            margin-top: 10px;
+            text-align:center;
+        }
+        #canvas{
+            border: 1px solid lightgray;
+        }
+        #controls{
+            margin-top: 10px;
+            text-align:center;
+        }
+        fieldset{
+            display: inline;
+        }
+        #eraseAllButton{
+            background-color: lightgray;
+            border: 1px solid #305999;
+            padding: 5px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="divcanvas">
+        <canvas id="canvas" width="800" height="500"></canvas>
+    </div>
+    <div id="controls">
+        <form>
+            <fieldset>
+                <legend>Stroke</legend>
+                <span>Color:</span>
+                <select id="strokeStyleSelect">
+                    <option value="cornflowerblue" selected>cornflowerblue</option>
+                    <option value="goldenrod">goldenrod</option>
+                    <option value="navy">navy</option>
+                    <option value="purple">purple</option>
+                </select>
+                <span>Width:</span>
+                <select id="StrokeWidthSelect">
+                    <option value="1" selected>1px</option>
+                    <option value="2">2px</option>
+                    <option value="3">3px</option>
+                    <option value="4">4px</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Fill</legend>
+                <span>fill:</span>
+                <input id="fillCheckBox" type="checkbox" checked/>
+                <span>Color:</span>
+                <select id="fliiStyleSelect">
+                    <option value="cornflowerblue" selected>cornflowerblue</option>
+                    <option value="goldenrod">goldenrod</option>
+                    <option value="navy">navy</option>
+                    <option value="purple">purple</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Other</legend>
+                <span>Shape:</span>
+                <select id="strokeShapeSelect">
+                    <option value="line" selected>Line</option>
+                    <option value="circle">Circle</option>
+                    <option value="rect">Rectangle</option>
+                    <option value="arcrect">round rectangle</option>
+                </select>
+
+                <span>Guidwires:</span>
+                <input id="guidewireCheckbox" type="checkbox" checked/>
+            </fieldset>
+        </form>
+
+        <input id="eraseAllButton" type="button" value="Clear"/>
+    </div>
+
+    <script src="paint.js"></script>
+</body>
+</html>
